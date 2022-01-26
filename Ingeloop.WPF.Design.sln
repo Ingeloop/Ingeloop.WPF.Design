@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingeloop.WPF.Design", "Ingeloop.WPF.Design\Ingeloop.WPF.Design.csproj", "{A82643BA-EA86-4B07-AB00-FBE6DA1C2EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ingeloop.WPF.Design.Demo", "Ingeloop.WPF.Design.Demo\Ingeloop.WPF.Design.Demo.csproj", "{9624750D-1F1D-4B7A-AA95-2B0D3A782BAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A82643BA-EA86-4B07-AB00-FBE6DA1C2EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A82643BA-EA86-4B07-AB00-FBE6DA1C2EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A82643BA-EA86-4B07-AB00-FBE6DA1C2EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A82643BA-EA86-4B07-AB00-FBE6DA1C2EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9624750D-1F1D-4B7A-AA95-2B0D3A782BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9624750D-1F1D-4B7A-AA95-2B0D3A782BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9624750D-1F1D-4B7A-AA95-2B0D3A782BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9624750D-1F1D-4B7A-AA95-2B0D3A782BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD8650CD-DD38-4156-82F0-45A9609D8649}
+	EndGlobalSection
+EndGlobal

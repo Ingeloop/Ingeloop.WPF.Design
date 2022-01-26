@@ -1,0 +1,25 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Ingeloop.WPF.Design">
+
+    <!--Styles Dictionnaries-->
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Buttons.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ComboBoxes.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Common.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ProgressBars.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Shadows.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ScrollBars.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Ripples.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Tooltips.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--Default Styles-->
+    <Style TargetType="Button" BasedOn="{StaticResource MaterialRoundedButton}"/>
+    <Style TargetType="ComboBox" BasedOn="{StaticResource ComboBoxStyle}"/>
+    <Style TargetType="ProgressBar" BasedOn="{StaticResource FlatProgressBar}"/>
+    <Style TargetType="ScrollBar" BasedOn="{StaticResource FlatScrollBar}"/>
+    <Style TargetType="ToolTip" BasedOn="{StaticResource DarkToolTip}"/>
+
+</ResourceDictionary>

@@ -1,0 +1,41 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Ingeloop.WPF.Design">
+
+    <!--#region App Colors-->
+    <Color x:Key="DynamicBlue">#0185df</Color>
+    <SolidColorBrush x:Key="DynamicBlueBrush" Color="{StaticResource DynamicBlue}" />
+    <!--#endregion-->
+
+    <!--#region Text Colors-->
+    <Color x:Key="DarkText">#262626</Color>
+    <SolidColorBrush x:Key="DarkTextBrush" Color="{StaticResource DarkText}" />
+
+    <Color x:Key="MediumText">#323232</Color>
+    <SolidColorBrush x:Key="MediumTextBrush" Color="{StaticResource MediumText}" />
+
+    <Color x:Key="InactiveText">#e1e4e7</Color>
+    <SolidColorBrush x:Key="InactiveTextBrush" Color="{StaticResource InactiveText}" />
+
+    <Color x:Key="DisabledText">#cfd2d4</Color>
+    <SolidColorBrush x:Key="DisabledTextBrush" Color="{StaticResource DisabledText}" />
+    <!--#endregion-->
+
+    <!--#region Grays-->
+    <Color x:Key="LightGray">#e0e0e0</Color>
+    <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}" />
+
+    <Color x:Key="MediumGray">#bdbdbd</Color>
+    <SolidColorBrush x:Key="MediumGrayBrush" Color="{StaticResource MediumGray}" />
+
+    <Color x:Key="VeryDarkGray">#262626</Color>
+    <SolidColorBrush x:Key="VeryDarkGrayBrush" Color="{StaticResource VeryDarkGray}" />
+    <!--#endregion-->
+
+    <!--#region Borders Colors-->
+    <Color x:Key="LightBorder">#cfd2d4</Color>
+    <SolidColorBrush x:Key="LightBorderBrush" Color="{StaticResource LightBorder}" />
+    <!--#endregion-->
+
+</ResourceDictionary>
