@@ -55,6 +55,7 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="border" Property="Opacity" Value="0.8" />
                             <Setter TargetName="border" Property="local:ShadowAssist.Darken" Value="True" />
                         </Trigger>
                         <Trigger Property="IsKeyboardFocused" Value="true">

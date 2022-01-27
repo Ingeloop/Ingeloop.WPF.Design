@@ -23,8 +23,14 @@
     <!--#endregion-->
 
     <!--#region Grays-->
-    <Color x:Key="LightGray">#e0e0e0</Color>
+    <Color x:Key="VeryLightGray">#fafafa</Color>
+    <SolidColorBrush x:Key="VeryLightGrayBrush" Color="{StaticResource VeryLightGray}" />
+
+    <Color x:Key="LightGray">#f0f0f0</Color>
     <SolidColorBrush x:Key="LightGrayBrush" Color="{StaticResource LightGray}" />
+
+    <Color x:Key="LightMediumGray">#e0e0e0</Color>
+    <SolidColorBrush x:Key="LightMediumGrayBrush" Color="{StaticResource LightMediumGray}" />
 
     <Color x:Key="MediumGray">#bdbdbd</Color>
     <SolidColorBrush x:Key="MediumGrayBrush" Color="{StaticResource MediumGray}" />

@@ -12,12 +12,23 @@
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Resources/Design.xaml"/>
     </Window.Resources>
 
+    <Window.DataContext>
+        <local:DemoViewModel></local:DemoViewModel>
+    </Window.DataContext>
+
     <Grid>
         <TabControl>
             <!--Buttons-->
             <TabItem Header="Buttons">
                 <StackPanel Margin="10" VerticalAlignment="Center">
                     <Button Width="300" ToolTip="Hello" Cursor="Hand">MaterialRoundedButton (default)</Button>
+                </StackPanel>
+            </TabItem>
+            <!--CheckBoxes-->
+            <TabItem Header="CheckBoxes">
+                <StackPanel Margin="10" VerticalAlignment="Center">
+                    <CheckBox Height="32" Width="32"></CheckBox>
+                    <CheckBox Style="{StaticResource SliderCheckBox}"></CheckBox>
                 </StackPanel>
             </TabItem>
             <!--ComboBoxes-->
@@ -28,6 +39,12 @@
                         <ComboBoxItem>Value 2</ComboBoxItem>
                         <ComboBoxItem>Value 3</ComboBoxItem>
                     </ComboBox>
+                </StackPanel>
+            </TabItem>
+            <!--DataGrids-->
+            <TabItem Header="DataGrids">
+                <StackPanel Margin="10" VerticalAlignment="Top">
+                    <DataGrid Height="200" ItemsSource="{Binding Products}" AutoGenerateColumns="True" CanUserSortColumns="True"/>
                 </StackPanel>
             </TabItem>
             <!--ProgressBars-->
@@ -45,7 +62,7 @@
             <!--TextBoxes-->
             <TabItem Header="TextBoxes">
                 <StackPanel Margin="10" VerticalAlignment="Center">
-                    <TextBox Width="300">TextBox sample</TextBox>
+                    <TextBox Width="300" Height="40">TextBox sample</TextBox>
                 </StackPanel>
             </TabItem>
         </TabControl>
