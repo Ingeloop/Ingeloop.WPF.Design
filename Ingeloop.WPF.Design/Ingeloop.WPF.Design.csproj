@@ -61,6 +61,7 @@
     <Compile Include="Controls\Shadows\ShadowEdgeConverter.cs" />
     <Compile Include="Controls\Shadows\ShadowInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Theme\AppTheme.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Colors\Colors.xaml">

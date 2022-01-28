@@ -9,8 +9,8 @@
 
     <Style x:Key="FlatProgressBar" TargetType="ProgressBar">
 
-        <Setter Property="local:ColorAssist.CustomColor1" Value="#2aa7e5" />
-        <Setter Property="local:ColorAssist.CustomColor2" Value="#3885bc" />
+        <Setter Property="local:ColorAssist.CustomColor1" Value="{DynamicResource PrimaryBrush}" />
+        <Setter Property="local:ColorAssist.CustomColor2" Value="{DynamicResource SecondaryBrush}" />
         
         <Setter Property="Template">
             <Setter.Value>

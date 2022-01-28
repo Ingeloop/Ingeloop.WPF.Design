@@ -18,7 +18,7 @@
     </Style>
 
     <Style x:Key="FlatCheckBox" TargetType="{x:Type CheckBox}">
-        <Setter Property="Foreground" Value="{StaticResource DynamicBlueBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PrimaryBrush}"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -151,7 +151,7 @@
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="ForegroundPanel" Property="Background" Value="{StaticResource DynamicBlueBrush}" />
+                            <Setter TargetName="ForegroundPanel" Property="Background" Value="{DynamicResource PrimaryBrush}" />
                             <Trigger.EnterActions>
                                 <BeginStoryboard x:Name="BeginStoryboardCheckedTrue" Storyboard="{StaticResource StoryboardIsChecked}" />
                                 <RemoveStoryboard BeginStoryboardName="BeginStoryboardCheckedFalse" />

@@ -9,7 +9,12 @@
         Title="MainWindow" Height="450" Width="800">
 
     <Window.Resources>
-        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Resources/Design.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Resources/Design.xaml"/>
+                <!--<design:AppTheme PrimaryColor="Violet" SecondaryColor="Green"></design:AppTheme>-->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Window.Resources>
 
     <Window.DataContext>

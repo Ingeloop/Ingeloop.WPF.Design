@@ -5,6 +5,7 @@
     
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Colors/Colors.xaml"/>
+        <local:AppTheme PrimaryColor="{StaticResource DynamicBlue}" SecondaryColor="{StaticResource DarkBlue}"></local:AppTheme>
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="FocusVisual">

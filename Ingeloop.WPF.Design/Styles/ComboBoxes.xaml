@@ -16,38 +16,11 @@
         <Setter Property="Padding" Value="2" />
         <Setter Property="Cursor" Value="Hand" />
         
-        <Setter Property="local:ColorAssist.CustomColor1" Value="{StaticResource VeryDarkGrayBrush}" />
-        <Setter Property="local:ColorAssist.CustomColor2" Value="#3885bc" />
-
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Grid>
                         <VisualStateManager.VisualStateGroups>
-                            <VisualStateGroup x:Name="CommonStates">
-                                <VisualState x:Name="Normal" />
-                                <VisualState x:Name="MouseOver">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Fill" Storyboard.TargetName="Arrow">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DynamicBlueBrush}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Fill" Storyboard.TargetName="Arrow">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DynamicBlueBrush}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Disabled">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Duration="0" Storyboard.TargetProperty="Fill" Storyboard.TargetName="Arrow">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource LightBorderBrush}" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                            </VisualStateGroup>
                             <VisualStateGroup x:Name="CheckStates">
                                 <VisualState x:Name="Checked">
                                     <Storyboard>
@@ -75,9 +48,17 @@
                         <Rectangle x:Name="Bd" Fill="Transparent" Grid.ColumnSpan="2" />
                         <Grid Grid.Column="1">
                             <Path x:Name="Arrow" Width="12" Height="8" Fill="{StaticResource LightBorderBrush}" Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" Stretch="Fill" />
-                            <Path x:Name="ArrowSelected" Width="12" Height="8" Visibility="Collapsed" Fill="{StaticResource DynamicBlueBrush}" Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" Stretch="Fill" />
+                            <Path x:Name="ArrowSelected" Width="12" Height="8" Visibility="Collapsed" Fill="{DynamicResource PrimaryBrush}" Data="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" Stretch="Fill" />
                         </Grid>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Arrow" Property="Fill" Value="{DynamicResource PrimaryBrush}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Arrow" Property="Fill" Value="{StaticResource LightBorderBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -165,7 +146,7 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Rectangle Fill="Transparent" />
-                        <Rectangle x:Name="fillColor" Fill="{StaticResource DynamicBlueBrush}" IsHitTestVisible="False" Opacity="0" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}" RadiusX="3" RadiusY="3" />
+                        <Rectangle x:Name="fillColor" Fill="{DynamicResource PrimaryBrush}" IsHitTestVisible="False" Opacity="0" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}" RadiusX="3" RadiusY="3" />
                         <ContentControl x:Name="contentControl" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
                             <ContentPresenter x:Name="contentPresenter" />
                         </ContentControl>
@@ -262,7 +243,7 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Border x:Name="normal" BorderBrush="{StaticResource LightBorderBrush}" BorderThickness="1" Grid.ColumnSpan="2" CornerRadius="3" RenderOptions.EdgeMode="Unspecified"/>
-                        <Border x:Name="hover" BorderBrush="{StaticResource DynamicBlueBrush}" BorderThickness="1" Visibility="Collapsed" Grid.ColumnSpan="2" CornerRadius="3"/>
+                        <Border x:Name="hover" BorderBrush="{DynamicResource PrimaryBrush}" BorderThickness="1" Visibility="Collapsed" Grid.ColumnSpan="2" CornerRadius="3"/>
 
                         <Popup x:Name="PART_Popup" AllowsTransparency="true" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom" VerticalOffset="7">
 

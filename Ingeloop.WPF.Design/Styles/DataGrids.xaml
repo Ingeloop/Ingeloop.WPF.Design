@@ -149,7 +149,7 @@
         <Setter Property="TextBlock.FontWeight" Value="Medium" />
         <Setter Property="Padding" Value="{Binding RelativeSource={RelativeSource Self}, Path=(local:DataGridAssist.ColumnHeaderPadding)}" />
         <Setter Property="Foreground" Value="White" />
-        <Setter Property="Background" Value="{StaticResource DynamicBlueBrush}" />
+        <Setter Property="Background" Value="{DynamicResource PrimaryBrush}" />
         <Setter Property="BorderBrush" Value="{Binding HorizontalGridLinesBrush, RelativeSource={RelativeSource AncestorType=DataGrid}}" />
         <Setter Property="BorderThickness" Value="0,0,1,1" />
         <Setter Property="BorderBrush" Value="{StaticResource LightBorderBrush}" />

@@ -6,6 +6,9 @@
     <!--#region App Colors-->
     <Color x:Key="DynamicBlue">#0185df</Color>
     <SolidColorBrush x:Key="DynamicBlueBrush" Color="{StaticResource DynamicBlue}" />
+
+    <Color x:Key="DarkBlue">#04518c</Color>
+    <SolidColorBrush x:Key="DarkBlueBrush" Color="{StaticResource DarkBlue}" />
     <!--#endregion-->
 
     <!--#region Text Colors-->
