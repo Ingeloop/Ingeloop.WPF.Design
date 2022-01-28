@@ -12,7 +12,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Resources/Design.xaml"/>
-                <!--<design:AppTheme PrimaryColor="Violet" SecondaryColor="Green"></design:AppTheme>-->
+                <design:AppTheme PrimaryColor="SteelBlue" SecondaryColor="LightSteelBlue"></design:AppTheme>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
