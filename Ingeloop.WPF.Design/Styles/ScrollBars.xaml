@@ -23,18 +23,14 @@
                             VerticalAlignment="Stretch"
                             Width="Auto"
                             Height="Auto"
-                            Margin="0,1,0,1"
+                            Margin="0,1"
                             Background="{TemplateBinding Background}" />
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="Tag"
-                                Value="Horizontal">
-                            <Setter TargetName="CornerScrollBarRectangle"
-                                Property="Width"
-                                Value="Auto" />
-                            <Setter TargetName="CornerScrollBarRectangle"
-                                Property="Height"
-                                Value="6" />
+                        <Trigger Property="Tag" Value="Horizontal">
+                            <Setter TargetName="CornerScrollBarRectangle" Property="Width" Value="Auto" />
+                            <Setter TargetName="CornerScrollBarRectangle" Property="Height" Value="10" />
+                            <Setter TargetName="CornerScrollBarRectangle" Property="Margin" Value="1,0" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

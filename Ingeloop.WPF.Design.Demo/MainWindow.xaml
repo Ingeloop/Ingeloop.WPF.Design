@@ -32,8 +32,8 @@
             <!--CheckBoxes-->
             <TabItem Header="CheckBoxes">
                 <StackPanel Margin="10" VerticalAlignment="Center">
-                    <CheckBox Height="32" Width="32"></CheckBox>
-                    <CheckBox Style="{StaticResource SliderCheckBox}"></CheckBox>
+                    <CheckBox>CheckBox</CheckBox>
+                    <CheckBox Style="{StaticResource SliderCheckBox}">Slider CheckBox</CheckBox>
                 </StackPanel>
             </TabItem>
             <!--ComboBoxes-->
@@ -60,7 +60,7 @@
             </TabItem>
             <!--Scrollbars-->
             <TabItem Header="Scrollbars">
-                <ScrollViewer>
+                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
                     <Image Source="https://picsum.photos/id/1015/1000" />
                 </ScrollViewer>
             </TabItem>

@@ -22,6 +22,9 @@
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type CheckBox}">
@@ -52,6 +55,7 @@
                     <Grid x:Name="templateRoot" Background="Transparent" SnapsToDevicePixels="True">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Viewbox Width="20" Height="20"  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                  FlowDirection="LeftToRight">
@@ -79,7 +83,7 @@
                             <BeginStoryboard Storyboard="{StaticResource Click}"/>
                         </EventTrigger>
                         <Trigger Property="HasContent" Value="true">
-                            <Setter Property="Padding" Value="4,2,0,0"/>
+                            <Setter Property="Padding" Value="5,0,0,0"/>
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Opacity" TargetName="Graphic" Value=".26" />
