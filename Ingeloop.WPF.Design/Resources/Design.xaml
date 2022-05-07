@@ -5,6 +5,8 @@
 
     <!--#region Styles Dictionnaries-->
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Icons;component/Resources/Generic.xaml"/>
+        
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Buttons.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/CheckBoxes.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ComboBoxes.xaml"/>
@@ -14,6 +16,7 @@
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Shadows.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ScrollBars.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Ripples.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/TabControls.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/TextBoxes.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Tooltips.xaml"/>
     </ResourceDictionary.MergedDictionaries>

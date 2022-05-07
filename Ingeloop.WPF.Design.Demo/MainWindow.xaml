@@ -64,6 +64,17 @@
                     <Image Source="https://picsum.photos/id/1015/1000" />
                 </ScrollViewer>
             </TabItem>
+            <!--TabControls-->
+            <TabItem Header="TabControls">
+                <design:SideTabControl SidePanelWidth="180" Background="SteelBlue">
+                    <design:SideTabItem Header="Tab 1" IconKind="Import">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 1</TextBlock>
+                    </design:SideTabItem>
+                    <design:SideTabItem Header="Tab 2" IconKind="Export">
+                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 2</TextBlock>
+                    </design:SideTabItem>
+                </design:SideTabControl>
+            </TabItem>
             <!--TextBoxes-->
             <TabItem Header="TextBoxes">
                 <StackPanel Margin="10" VerticalAlignment="Center">
