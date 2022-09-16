@@ -27,6 +27,7 @@
             <TabItem Header="Buttons">
                 <StackPanel Margin="10" VerticalAlignment="Center">
                     <Button Width="300" ToolTip="Hello" Cursor="Hand">MaterialRoundedButton (default)</Button>
+                    <Button Style="{StaticResource MaterialCircularButton}" Margin="0,10" ToolTip="Hello" Cursor="Hand">X</Button>
                 </StackPanel>
             </TabItem>
             <!--CheckBoxes-->

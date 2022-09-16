@@ -70,4 +70,71 @@
         </Setter>
     </Style>
 
+    <Style x:Key="MaterialCircularButton" TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="#f2f2f2"/>
+        <Setter Property="Foreground" Value="#1f1f1f"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="local:RippleAssist.Feedback" Value="White" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="TextBlock.FontWeight" Value="Medium"/>
+        <Setter Property="TextBlock.FontSize" Value="14"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Width" Value="32" />
+        <Setter Property="local:ButtonAssist.CornerRadius" Value="16" />
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Grid>
+                        <AdornerDecorator CacheMode="{Binding RelativeSource={RelativeSource Self}, Path=(local:ShadowAssist.CacheMode)}">
+                            <Grid>
+                                <Border 
+                                    Background="{TemplateBinding Background}" 
+                                    CornerRadius="{Binding Path=(local:ButtonAssist.CornerRadius), RelativeSource={RelativeSource TemplatedParent}}"
+                                    BorderThickness="{TemplateBinding BorderThickness}"
+                                    BorderBrush="{TemplateBinding BorderBrush}"
+                                    x:Name="border"
+                                    Effect="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=(local:ShadowAssist.ShadowDepth), Converter={x:Static local:ShadowConverter.Instance}}" />
+                            </Grid>
+                        </AdornerDecorator>
+                        <local:Ripple Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" Focusable="False"
+                                    ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                    HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    Padding="{TemplateBinding Padding}"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                            <local:Ripple.Clip>
+                                <MultiBinding Converter="{x:Static local:BorderClipConverter.Instance}">
+                                    <Binding ElementName="border" Path="ActualWidth" />
+                                    <Binding ElementName="border" Path="ActualHeight" />
+                                    <Binding ElementName="border" Path="CornerRadius" />
+                                    <Binding ElementName="border" Path="BorderThickness" />
+                                </MultiBinding>
+                            </local:Ripple.Clip>
+                        </local:Ripple>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="false">
+                            <Setter TargetName="border" Property="Background" Value="Transparent" />
+                            <Setter TargetName="border" Property="local:ShadowAssist.Darken" Value="True" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="border" Property="local:ShadowAssist.Darken" Value="True" />
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter TargetName="border" Property="local:ShadowAssist.Darken" Value="True" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.23"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>
