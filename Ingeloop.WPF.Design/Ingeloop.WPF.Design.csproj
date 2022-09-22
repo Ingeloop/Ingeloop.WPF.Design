@@ -57,6 +57,12 @@
     <Compile Include="Controls\DataGrids\ListSortDirectionIndicator.cs" />
     <Compile Include="Controls\Extensions\DependencyObjectExtension.cs" />
     <Compile Include="Controls\Extensions\UIElementExtension.cs" />
+    <Compile Include="Controls\ListViews\DragAdorner.cs" />
+    <Compile Include="Controls\ListViews\ListViewDragDropManager.cs" />
+    <Compile Include="Controls\ListViews\ListViewItemDragState.cs" />
+    <Compile Include="Controls\ListViews\ReorderableListView.xaml.cs">
+      <DependentUpon>ReorderableListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Ripples\Ripple.cs" />
     <Compile Include="Controls\Assists\RippleAssist.cs" />
     <Compile Include="Controls\Assists\ShadowAssist.cs" />
@@ -67,11 +73,16 @@
     <Compile Include="Controls\TabControls\SideTabControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Theme\AppTheme.cs" />
+    <Compile Include="Utilities\MouseUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Colors\Colors.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ListViews\ReorderableListView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Resources\Design.xaml">
       <SubType>Designer</SubType>

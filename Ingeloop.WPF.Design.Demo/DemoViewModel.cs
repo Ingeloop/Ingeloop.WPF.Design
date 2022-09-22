@@ -15,6 +15,8 @@ namespace Ingeloop.WPF.Design.Demo
             Products.Add(new Product { ID = "1", Name = "Product 1", Description = "Description 1", Quantity = 5 });
             Products.Add(new Product { ID = "2", Name = "Product 2", Description = "Description 2", Quantity = 2 });
             Products.Add(new Product { ID = "3", Name = "Product 3", Description = "Description 3", Quantity = 8 });
+            Products.Add(new Product { ID = "4", Name = "Product 4", Description = "Description 4", Quantity = 12 });
+            Products.Add(new Product { ID = "5", Name = "Product 5", Description = "Description 5", Quantity = 3 });
         }
     }
 

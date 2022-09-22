@@ -34,7 +34,7 @@
             <TabItem Header="CheckBoxes">
                 <StackPanel Margin="10" VerticalAlignment="Center">
                     <CheckBox>CheckBox</CheckBox>
-                    <CheckBox Style="{StaticResource SliderCheckBox}">Slider CheckBox</CheckBox>
+                    <CheckBox Style="{StaticResource SliderCheckBox}" Margin="0,10">Slider CheckBox</CheckBox>
                 </StackPanel>
             </TabItem>
             <!--ComboBoxes-->
@@ -51,6 +51,28 @@
             <TabItem Header="DataGrids">
                 <StackPanel Margin="10" VerticalAlignment="Top">
                     <DataGrid Height="200" ItemsSource="{Binding Products}" AutoGenerateColumns="True" CanUserSortColumns="True"/>
+                </StackPanel>
+            </TabItem>
+            <!--ListViews-->
+            <TabItem Header="ListViews">
+                <StackPanel Margin="10" VerticalAlignment="Top">
+                    <TextBlock>Reorderable ListView</TextBlock>
+                    <design:ReorderableListView ItemsSource="{Binding Products}" BorderBrush="Gainsboro">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <Border Height="60" BorderThickness="0,0,0,1" BorderBrush="Gainsboro" Background="White">
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid Grid.Column="1">
+                                            <TextBlock Text="{Binding Name}" FontSize="14" VerticalAlignment="Center" Margin="20,0" FontWeight="SemiBold"></TextBlock>
+                                        </Grid>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </design:ReorderableListView>
                 </StackPanel>
             </TabItem>
             <!--ProgressBars-->
