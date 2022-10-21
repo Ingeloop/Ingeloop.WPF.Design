@@ -8,7 +8,7 @@
     </ResourceDictionary.MergedDictionaries>
 
     <Style x:Key="ComboBoxToggleButtonStyle" TargetType="ToggleButton">
-        <Setter Property="FontSize" Value="14.667" />
+        <Setter Property="FontSize" Value="12" />
         <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="MinWidth" Value="30" />
         <Setter Property="MinHeight" Value="20" />
@@ -65,7 +65,6 @@
     </Style>
 
     <Style x:Key="ComboBoxItemStyle" TargetType="ComboBoxItem">
-        <Setter Property="FontSize" Value="14.667" />
         <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="MinHeight" Value="20" />
         <Setter Property="Padding" Value="6,0" />
@@ -173,7 +172,7 @@
         <Setter Property="Margin" Value="0" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
-        <Setter Property="FontSize" Value="14.667" />
+        <Setter Property="FontSize" Value="14" />
         <Setter Property="FontFamily" Value="Segoe UI" />
         <Setter Property="MinHeight" Value="20" />
         <Setter Property="ItemContainerStyle" Value="{StaticResource ComboBoxItemStyle}" />
