@@ -12,6 +12,7 @@
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ComboBoxes.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Common.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Datagrids.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Helpers.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ProgressBars.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Shadows.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/ScrollBars.xaml"/>

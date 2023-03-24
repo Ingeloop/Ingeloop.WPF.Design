@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Ingeloop.WPF.Design.Demo"
         xmlns:design="clr-namespace:Ingeloop.WPF.Design;assembly=Ingeloop.WPF.Design"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1200">
 
     <Window.Resources>
         <ResourceDictionary>
@@ -53,6 +53,10 @@
                     <DataGrid Height="200" ItemsSource="{Binding Products}" AutoGenerateColumns="True" CanUserSortColumns="True"/>
                 </StackPanel>
             </TabItem>
+            <!--Helpers-->
+            <TabItem Header="Helpers">
+                <design:InProgressControl></design:InProgressControl>
+            </TabItem>
             <!--ListViews-->
             <TabItem Header="ListViews">
                 <StackPanel Margin="10" VerticalAlignment="Top">
@@ -89,14 +93,38 @@
             </TabItem>
             <!--TabControls-->
             <TabItem Header="TabControls">
-                <design:SideTabControl SidePanelWidth="180" Background="SteelBlue">
-                    <design:SideTabItem Header="Tab 1" IconKind="Import">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 1</TextBlock>
-                    </design:SideTabItem>
-                    <design:SideTabItem Header="Tab 2" IconKind="Export">
-                        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 2</TextBlock>
-                    </design:SideTabItem>
-                </design:SideTabControl>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <design:SideTabControl Grid.Column="0" SidePanelWidth="180" Background="SteelBlue">
+                        <design:SideTabItem Header="Tab 1" IconKind="Import">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 1</TextBlock>
+                        </design:SideTabItem>
+                        <design:SideTabItem Header="Tab 2" IconKind="Export">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 2</TextBlock>
+                        </design:SideTabItem>
+                    </design:SideTabControl>
+                    <design:MailBoxTabControl Grid.Column="1" SidePanelWidth="180" Background="SteelBlue">
+                        <design:MailBoxTabItem Header="Tab 1" IconKind="Import">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 1</TextBlock>
+                        </design:MailBoxTabItem>
+                        <design:MailBoxTabItem Header="Tab 2" IconKind="Export">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 2</TextBlock>
+                        </design:MailBoxTabItem>
+                    </design:MailBoxTabControl>
+                    <design:SettingsTabControl Grid.Column="2" SidePanelWidth="180" Background="White">
+                        <design:SettingsTabItem Header="Tab 1" IconKind="Import" Description="Tab 1 description">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 1</TextBlock>
+                        </design:SettingsTabItem>
+                        <design:SettingsTabItem Header="Tab 2" IconKind="Export" Description="Tab 2 description">
+                            <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Tab 2</TextBlock>
+                        </design:SettingsTabItem>
+                    </design:SettingsTabControl>
+                </Grid>
+
             </TabItem>
             <!--TextBoxes-->
             <TabItem Header="TextBoxes">

@@ -106,4 +106,220 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type local:MailBoxTabControl}">
+        <Setter Property="TabStripPlacement" Value="Left"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MailBoxTabControl}">
+                    <Grid KeyboardNavigation.TabNavigation="Local">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="{TemplateBinding SidePanelWidth}" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <ContentControl Content="{TemplateBinding TopControl}"/>
+                        <TabPanel x:Name="HeaderPanel"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Panel.ZIndex="1"
+                            Margin="0"
+                            IsItemsHost="True"
+                            KeyboardNavigation.TabIndex="1"
+                            Background="{TemplateBinding Background}" />
+                        <Border x:Name="Border"
+                            Background="White"
+                            Grid.Column="1"
+                            Grid.RowSpan="2"
+                            BorderThickness="0"
+                            CornerRadius="0"
+                            KeyboardNavigation.TabNavigation="Local"
+                            KeyboardNavigation.DirectionalNavigation="Contained"
+                            KeyboardNavigation.TabIndex="2">
+                            <Border.BorderBrush>
+                                <SolidColorBrush Color="{DynamicResource BorderMediumColor}"/>
+                            </Border.BorderBrush>
+                            <ContentPresenter
+                                x:Name="PART_SelectedContentHost"
+                                ContentSource="SelectedContent" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:MailBoxTabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:MailBoxTabItem}">
+                    <Grid Height="42" Cursor="Hand" Name="Panel">
+                        <Border x:Name="TabItemBorder" Background="#f0f0f0" CornerRadius="21"/>
+
+                        <Grid Margin="10,5,0,5" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <icons:PackIcon
+                                Foreground="White"
+                                Kind="{TemplateBinding IconKind}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Width="24"
+                                Height="24"/>
+
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="10,0,0,0"
+                                FontSize="14"
+                                FontFamily="Roboto"
+                                HorizontalAlignment="left"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="{TemplateBinding Header}">
+                            </TextBlock>
+
+                            <TextBlock
+                                Grid.Column="2"
+                                Margin="5,0,5,0"
+                                FontSize="14"
+                                FontFamily="Roboto"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Foreground="White"
+                                Text="{TemplateBinding SideText}">
+                            </TextBlock>
+
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="TabItemBorder" Property="Opacity" Value="0" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="TabItemBorder" Property="Opacity" Value="0.1" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="TabItemBorder" Property="Opacity" Value="0.2" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:SettingsTabControl}">
+        <Setter Property="TabStripPlacement" Value="Left"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:SettingsTabControl}">
+                    <Grid KeyboardNavigation.TabNavigation="Local">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="{TemplateBinding SidePanelWidth}" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <TabPanel x:Name="HeaderPanel"
+                            Grid.Column="0"
+                            Panel.ZIndex="1"
+                            Margin="0"
+                            IsItemsHost="True"
+                            KeyboardNavigation.TabIndex="1"
+                            Background="{TemplateBinding Background}" />
+                        <Border x:Name="Border"
+                            Grid.Column="1"
+                            BorderThickness="1,0,0,0"
+                            BorderBrush="{StaticResource LightBlueGrayBrush}"
+                            CornerRadius="0"
+                            KeyboardNavigation.TabNavigation="Local"
+                            KeyboardNavigation.DirectionalNavigation="Contained"
+                            KeyboardNavigation.TabIndex="2">
+                            <ContentPresenter
+                                x:Name="PART_SelectedContentHost"
+                                ContentSource="SelectedContent" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:SettingsTabItem}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:SettingsTabItem}">
+                    <Grid Cursor="Hand" Name="Panel">
+                        <Border x:Name="TabItemBorder" Background="#f0f0f0" BorderThickness="0,0,0,1" BorderBrush="{StaticResource LightBlueGrayBrush}"/>
+
+                        <Grid Margin="10,10" VerticalAlignment="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <icons:PackIcon
+                                Grid.RowSpan="2"
+                                Foreground="{StaticResource BlueGrayBrush}"
+                                Kind="{TemplateBinding IconKind}"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                Margin="5,0"
+                                Width="18"
+                                Height="18"/>
+
+                            <TextBlock
+                                Grid.Column="1"
+                                Margin="5,0"
+                                FontSize="14"
+                                FontFamily="Roboto"
+                                FontWeight="Regular"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource VeryDarkBlueBrush}"
+                                Text="{TemplateBinding Header}">
+                            </TextBlock>
+
+                            <TextBlock
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Margin="5,2,5,0"
+                                FontSize="12"
+                                FontFamily="Roboto"
+                                HorizontalAlignment="Left"
+                                TextWrapping="Wrap"
+                                VerticalAlignment="Center"
+                                Foreground="{StaticResource BlueGrayBrush}"
+                                Text="{TemplateBinding Description}">
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter TargetName="TabItemBorder" Property="Background" Value="{StaticResource LightBackgroundBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="TabItemBorder" Property="Background" Value="{StaticResource LightBackgroundHoverBrush}" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="TabItemBorder" Property="Background" Value="{StaticResource LightBackgroundSelectedBrush}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
 </ResourceDictionary>

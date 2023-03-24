@@ -9,6 +9,9 @@
 
     <Color x:Key="DarkBlue">#04518c</Color>
     <SolidColorBrush x:Key="DarkBlueBrush" Color="{StaticResource DarkBlue}" />
+
+    <Color x:Key="VeryDarkBlue">#0f1729</Color>
+    <SolidColorBrush x:Key="VeryDarkBlueBrush" Color="{StaticResource VeryDarkBlue}" />
     <!--#endregion-->
 
     <!--#region Text Colors-->
@@ -35,8 +38,20 @@
     <Color x:Key="LightMediumGray">#e0e0e0</Color>
     <SolidColorBrush x:Key="LightMediumGrayBrush" Color="{StaticResource LightMediumGray}" />
 
+    <Color x:Key="LightBlueGray">#e2e8f0</Color>
+    <SolidColorBrush x:Key="LightBlueGrayBrush" Color="{StaticResource LightBlueGray}" />
+
+    <Color x:Key="BlueGray">#64748b</Color>
+    <SolidColorBrush x:Key="BlueGrayBrush" Color="{StaticResource BlueGray}" />
+
     <Color x:Key="MediumGray">#bdbdbd</Color>
     <SolidColorBrush x:Key="MediumGrayBrush" Color="{StaticResource MediumGray}" />
+
+    <Color x:Key="DarkGray">#636568</Color>
+    <SolidColorBrush x:Key="DarkGrayBrush" Color="{StaticResource DarkGray}" />
+
+    <Color x:Key="DarkBlueGray">#0b283f</Color>
+    <SolidColorBrush x:Key="DarkBlueGrayBrush" Color="{StaticResource DarkBlueGray}" />
 
     <Color x:Key="VeryDarkGray">#262626</Color>
     <SolidColorBrush x:Key="VeryDarkGrayBrush" Color="{StaticResource VeryDarkGray}" />
@@ -45,6 +60,15 @@
     <!--#region Borders Colors-->
     <Color x:Key="LightBorder">#cfd2d4</Color>
     <SolidColorBrush x:Key="LightBorderBrush" Color="{StaticResource LightBorder}" />
+
+    <Color x:Key="LightBackground">white</Color>
+    <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource LightBackground}" />
+
+    <Color x:Key="LightBackgroundHover">#f7faff</Color>
+    <SolidColorBrush x:Key="LightBackgroundHoverBrush" Color="{StaticResource LightBackgroundHover}" />
+
+    <Color x:Key="LightBackgroundSelected">#f1f5fa</Color>
+    <SolidColorBrush x:Key="LightBackgroundSelectedBrush" Color="{StaticResource LightBackgroundSelected}" />
     <!--#endregion-->
 
 </ResourceDictionary>
