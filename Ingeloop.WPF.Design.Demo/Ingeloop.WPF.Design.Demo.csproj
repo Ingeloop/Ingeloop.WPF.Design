@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Ingeloop.WPF.Core, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ingeloop.WPF.Core.1.1.0\lib\net48\Ingeloop.WPF.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Ingeloop.WPF.Icons, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Ingeloop.WPF.Icons.1.0.0.3\lib\net472\Ingeloop.WPF.Icons.dll</HintPath>
     </Reference>

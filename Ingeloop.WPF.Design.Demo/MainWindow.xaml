@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ingeloop.WPF.Design.Demo"
+        xmlns:core="clr-namespace:Ingeloop.WPF.Core;assembly=Ingeloop.WPF.Core"
         xmlns:design="clr-namespace:Ingeloop.WPF.Design;assembly=Ingeloop.WPF.Design"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="1200">
@@ -16,6 +17,8 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+
+    <core:DialogService.DialogHost>true</core:DialogService.DialogHost>
 
     <Window.DataContext>
         <local:DemoViewModel></local:DemoViewModel>
@@ -51,6 +54,14 @@
             <TabItem Header="DataGrids">
                 <StackPanel Margin="10" VerticalAlignment="Top">
                     <DataGrid Height="200" ItemsSource="{Binding Products}" AutoGenerateColumns="True" CanUserSortColumns="True"/>
+                </StackPanel>
+            </TabItem>
+            <!--Dialogs-->
+            <TabItem Header="Dialogs">
+                <StackPanel VerticalAlignment="Center">
+                    <Button Margin="5" Command="{Binding MessageDialogCommand}">Message Dialog</Button>
+                    <Button Margin="5" Command="{Binding ConfirmDialogCommand}">Confirm Dialog</Button>
+                    <Button Margin="5" Command="{Binding InputDialogCommand}">Input Dialog</Button>
                 </StackPanel>
             </TabItem>
             <!--Helpers-->

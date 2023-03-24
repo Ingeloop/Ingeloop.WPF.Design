@@ -20,6 +20,7 @@
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/TabControls.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/TextBoxes.xaml"/>
         <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Tooltips.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Ingeloop.WPF.Design;component/Styles/Windows.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     <!--#endregion-->
 
