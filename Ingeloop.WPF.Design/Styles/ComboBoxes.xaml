@@ -74,11 +74,12 @@
         <Setter Property="Padding" Value="7" />
         <Setter Property="Cursor" Value="Hand" />
         <Setter Property="Foreground" Value="{StaticResource DarkTextBrush}"></Setter>
+        <Setter Property="Background" Value="{DynamicResource PrimaryBrush}"></Setter>
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBoxItem">
-                    <Grid Background="{TemplateBinding Background}">
+                    <Grid Background="White">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
@@ -145,7 +146,7 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Rectangle Fill="Transparent" />
-                        <Rectangle x:Name="fillColor" Fill="{DynamicResource PrimaryBrush}" IsHitTestVisible="False" Opacity="0" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}" RadiusX="3" RadiusY="3" />
+                        <Rectangle x:Name="fillColor" Fill="{TemplateBinding Background}" IsHitTestVisible="False" Opacity="0" Stroke="{TemplateBinding BorderBrush}" StrokeThickness="{TemplateBinding BorderThickness}" RadiusX="3" RadiusY="3" />
                         <ContentControl x:Name="contentControl" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Padding}">
                             <ContentPresenter x:Name="contentPresenter" />
                         </ContentControl>
