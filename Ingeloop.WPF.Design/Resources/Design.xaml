@@ -30,6 +30,7 @@
     <Style TargetType="CheckBox" BasedOn="{StaticResource FlatCheckBox}"/>
     <Style TargetType="ComboBox" BasedOn="{StaticResource FlatComboBox}"/>
     <Style TargetType="DataGrid" BasedOn="{StaticResource FlatDataGrid}"/>
+    <Style TargetType="PasswordBox" BasedOn="{StaticResource FlatPasswordBox}"/>
     <Style TargetType="ProgressBar" BasedOn="{StaticResource FlatProgressBar}"/>
     <Style TargetType="ScrollBar" BasedOn="{StaticResource FlatScrollBar}"/>
     <Style TargetType="TextBox" BasedOn="{StaticResource FlatTextBox}"/>
